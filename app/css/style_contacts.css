@@ -1,0 +1,12 @@
+main {
+    max-width: 1400px;
+}
+header {
+    text-align: center;
+}
+.header_img {
+    z-index: 500;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
