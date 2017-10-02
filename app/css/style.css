@@ -853,6 +853,14 @@ h1.photo_header {
   padding: 100px 0 50px 0;
 }
 
+@media (max-width: 1017px) {
+  h1.photo_header {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .elephant {
   min-height: 597px;
   padding-top: 100px;
