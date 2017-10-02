@@ -194,6 +194,10 @@ pre {
 }
 
 @media (max-width: 1017px) {
+  .header_img {
+    z-index: 901;
+  }
+
   .connected-carousels .stage img {
     padding-bottom: 0;
   }
