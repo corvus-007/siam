@@ -361,7 +361,7 @@ ol li::before {
 }
 
 .container {
-  width: 970px;
+  max-width: 970px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
@@ -642,7 +642,7 @@ div#contactform .txtarea {
 .reviews,
 .reviews_form,
 .reviews_pagination {
-  width: 970px;
+  max-width: 970px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -725,6 +725,23 @@ div#contactform .txtarea {
 
 .master_block img {
   max-width: 100%;
+}
+
+@media (max-width: 1017px) {
+  .master_block {
+    width: 50%;
+    margin-bottom: 2.2rem;
+  }
+
+  .master_block h3 {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 567px) {
+  .master_block {
+    width: 100%;
+  }
 }
 
 h1.photo_header {
