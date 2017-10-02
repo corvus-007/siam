@@ -35,7 +35,7 @@ gulp.task('style', function () {
         sort: true
       })
     ]))
-    .pipe(minify())
+    // .pipe(minify())
     .pipe(gulp.dest('build/css/'))
     .pipe(browserSync.stream());
 });
