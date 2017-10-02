@@ -519,23 +519,14 @@ nav ul>li {
   padding-left: 10px;
 }
 
-.main-nav {
-
-}
-
 .main-nav__toggle {
   display: none;
-}
-
-.main-nav__list {
-
 }
 
 @media (max-width: 1017px) {
   .top-line {
     height: auto;
   }
-
   .top-line .container {
     display: flex;
     justify-content: space-between;
@@ -543,24 +534,20 @@ nav ul>li {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-
   .top-line .icon {
     position: static;
   }
-
   .top-line .tel {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
-
   .main-nav {
     order: 1;
     width: auto;
     position: static;
   }
-
   .main-nav__toggle {
     position: relative;
     display: block;
@@ -571,7 +558,6 @@ nav ul>li {
     cursor: pointer;
     border-radius: 50%;
   }
-
   .main-nav__toggle::before {
     content: "";
     position: absolute;
@@ -587,11 +573,9 @@ nav ul>li {
     box-shadow: 0 0 0 currentColor, 0 0 0 currentColor;
     transition: 0.25s ease-out;
   }
-
   .main-nav--closed .main-nav__toggle::before {
     box-shadow: 0 6px 0 currentColor, 0 -6px 0 currentColor;
   }
-
   .main-nav__list {
     position: absolute;
     left: 0;
@@ -603,11 +587,9 @@ nav ul>li {
     padding: 0;
     background-color: rgba(255, 255, 255, .7);
   }
-
   .main-nav__list li {
     padding: 0;
   }
-
   .main-nav__list a {
     display: block;
     padding-top: 1rem;
@@ -617,34 +599,28 @@ nav ul>li {
     color: #30193e;
     transition: 0.25s;
   }
-
   .main-nav__list a:hover {
     background-color: rgba(255, 255, 255, .7);
   }
-
   .main-nav__list .logo {
     display: none;
   }
-
   .main-nav--closed .main-nav__list {
     display: none;
   }
-
   .main-nav--no-js .main-nav__list {
     display: flex;
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 568px) {
   .top-line .container {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-
   .top-line .icon {
     display: none;
   }
-
   .top-line .tel {
     position: static;
     transform: none;
@@ -851,23 +827,19 @@ div#contactform .txtarea {
     background: none;
     overflow: hidden;
   }
-
   .certificate h1 {
     margin-bottom: 2rem;
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .certificate_text {
     width: auto;
     margin-bottom: 1rem;
   }
-
   @supports (clip-path: polygon(1px 2px)) {
     .certificate_text {
       padding-right: 12rem;
     }
-
     .certificate_text::before {
       content: "";
       position: absolute;
@@ -880,7 +852,6 @@ div#contactform .txtarea {
       clip-path: polygon(823.5px 1.5px, 841.5px 186.5px, 917.5px 244.5px, 1075.5px 278.5px, 1114.5px 278.5px, 1114.5px 1.5px, 823.5px 1.5px);
     }
   }
-
   .certificate .text_1,
   .certificate .text_2 {
     float: left;
@@ -888,7 +859,6 @@ div#contactform .txtarea {
     position: static;
     text-align: center;
   }
-
   .certificate .text_1 a,
   .certificate .text_2 a {
     display: inline-block;
@@ -902,7 +872,6 @@ div#contactform .txtarea {
     box-sizing: border-box;
     transition: 0.25s;
   }
-
   .certificate .text_1 a:hover,
   .certificate .text_2 a:hover {
     background-color: #4a315a;
@@ -914,7 +883,6 @@ div#contactform .txtarea {
     .certificate_text {
       padding-right: 0;
     }
-
     .certificate_text::before {
       content: none;
     }
@@ -927,7 +895,6 @@ div#contactform .txtarea {
     width: 100%;
     margin-bottom: 1.2rem;
   }
-
   .certificate .text_1 a,
   .certificate .text_2 a {
     min-width: 80%;
@@ -968,13 +935,12 @@ div#contactform .txtarea {
     width: 50%;
     margin-bottom: 2.2rem;
   }
-
   .master_block h3 {
     padding-top: 0;
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 568px) {
   .master_block {
     width: 100%;
   }
@@ -1019,7 +985,6 @@ h1.photo_header {
     background-position: right calc(50% + 5rem);
     background-size: 90vw;
   }
-
   .elephant h1 {
     width: auto;
     margin-bottom: 2rem;
@@ -1027,7 +992,6 @@ h1.photo_header {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .elephant_text {
     width: 50%;
     padding-bottom: 6rem;
@@ -1040,11 +1004,10 @@ h1.photo_header {
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 568px) {
   .elephant {
     background: none;
   }
-
   .elephant_text {
     width: auto;
   }
@@ -1495,6 +1458,33 @@ footer .site-rules {
   font-size: 20px;
   font-weight: bold;
   text-align: right;
+}
+
+@media (max-width: 568px) {
+  footer {
+    text-align: center;
+  }
+  footer h2,
+  footer .text,
+  footer .icon,
+  .copy {
+    width: auto;
+    float: none;
+  }
+  .art-footer {
+    display: none;
+  }
+  footer .icon {
+    position: static;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+  }
+  .copy {
+    padding-top: 0;
+  }
 }
 
 .copy {
