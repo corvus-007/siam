@@ -55,8 +55,8 @@ gulp.task('fileinclude', function () {
 });
 
 gulp.task('images', function () {
-  return gulp.src(['app/images/**/*', 'app/img/**/*', 'app/attachments/**/*'])
-    .pipe(gulp.dest('build'));
+  return gulp.src(['app/images/', 'app/img/', 'app/attachments/'])
+    .pipe(gulp.dest('build/'));
 });
 
 
