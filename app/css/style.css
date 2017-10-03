@@ -436,6 +436,13 @@ h1 {
 @media (max-width: 1017px) {
   h1 {
     text-align: center;
+    hyphens: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 2.2rem;
   }
 }
 
@@ -1038,6 +1045,35 @@ h1.photo_header {
   font-size: 34pt;
 }
 
+@media (max-width: 1017px) {
+  .about_massage {
+    margin-top: 115px;
+    padding-bottom: 2rem;
+    background-position-x: calc(50% + 18vw);
+  }
+  .about_massage h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+  }
+  .about_massage_text {
+    width: 60%;
+  }
+}
+
+@media (max-width: 568px) {
+  .about_massage {
+    padding-bottom: 0;
+    background: none;
+  }
+  .about_massage h1 {
+    text-align: center;
+  }
+  .about_massage_text {
+    width: auto;
+  }
+}
+
 .technique_massage {
   margin-top: 50px;
   min-height: 870px;
@@ -1052,6 +1088,28 @@ h1.photo_header {
 .technique_massage h1 {
   padding-top: 50px;
   text-align: center;
+}
+
+@media (max-width: 1017px) {
+  .technique_massage {
+    min-height: auto;
+    margin-top: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-position: calc(50% - 15vw);
+    background-size: cover;
+  }
+  .technique_massage h1 {
+    padding-left: 15px;
+    padding-right: 1px;
+  }
+}
+
+@media (max-width: 773px) {
+  .technique_massage_text {
+    width: auto;
+    float: none;
+  }
 }
 
 .etiquette_massage {
@@ -1080,6 +1138,45 @@ h1.photo_header {
   width: 285px;
 }
 
+@media (max-width: 1017px) {
+  .etiquette_massage {
+    min-height: auto;
+    background: none;
+  }
+  .etiquette_massage h1 {
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+  }
+  .etiquette_massage_text {
+    width: auto;
+    margin-bottom: 2rem;
+    float: none;
+  }
+  .etiquette_text {
+    position: static;
+    width: auto;
+    padding: 2rem;
+    background-color: #eee;
+    border-radius: 2px;
+  }
+  .etiquette_text h5 {
+    margin-bottom: 0.5rem;
+    padding-top: 0;
+    font-size: 1.6rem;
+  }
+  .etiquette_text p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+  .etiquette_text p:last-child {
+    padding-bottom: 0;
+  }
+}
+
 .contra_massage {
   margin-top: -25px;
   padding-bottom: 30px;
@@ -1101,6 +1198,27 @@ h1.photo_header {
   content: "- ";
   padding-right: 3px;
   line-height: 1.5;
+}
+
+@media (max-width: 1017px) {
+  .contra_massage {
+    margin-top: 0;
+    background-size: cover;
+    background-position-x: calc(50% + 15vw);
+  }
+  .contra_massage h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 773px) {
+  .contra_massage {
+    background: none;
+  }
+  .contra_massage_text {
+    width: auto;
+  }
 }
 
 
