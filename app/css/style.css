@@ -1165,14 +1165,16 @@ h1.photo_header {
   }
   .etiquette_text h5 {
     margin-bottom: 0.5rem;
-    padding-top: 0;
     font-size: 1.6rem;
   }
   .etiquette_text p {
     font-size: 1.15rem;
     line-height: 1.5;
   }
-  .etiquette_text p:last-child {
+  .etiquette_text > :first-child {
+    padding-top: 0;
+  }
+  .etiquette_text > :last-child {
     padding-bottom: 0;
   }
 }
@@ -1588,6 +1590,79 @@ h1.photo_header {
   float: left;
 }
 
+@media (max-width: 1017px) {
+  .contacts h1 {
+    width: auto;
+  }
+  .contact_block {
+    width: auto;
+    float: none;
+  }
+  .contacts_content,
+  div#contactform {
+    width: 70%;
+    margin: auto;
+  }
+  #response {
+    display: none !important;
+  }
+  .contacts_bottom {
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .contacts_text {
+    position: static;
+    width: auto;
+    padding: 2rem;
+    background-color: #eee;
+    border-radius: 2px;
+  }
+  .contacts_text span {
+    font-size: 1.35rem;
+  }
+  .contacts_text p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+  .contacts_text> :first-child {
+    padding-top: 0;
+  }
+  .contacts_text> :last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 667px) {
+  .contacts_content,
+  div#contactform {
+    width: auto;
+  }
+  .contacts_content {}
+  .contacts #contactform {}
+  div#contactform .txt,
+  div#contactform .txtarea {
+    width: 100%;
+    padding: 0.8rem;
+    box-sizing: border-box;
+  }
+  #submitbtn {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  div#contactform label.agreement {
+    width: auto !important;
+  }
+}
+
 
 /*Отзывы*/
 
@@ -1694,24 +1769,6 @@ div#item1.max {
 }
 
 @media (max-width: 667px) {
-  .reviews_form #contactform {
-    width: auto;
-  }
-  .reviews_form #submitbtn {
-    display: block;
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-  .reviews_form div#contactform label.agreement {
-    width: auto;
-  }
   .reviews {
     margin-bottom: 2rem;
   }
@@ -1859,7 +1916,7 @@ footer .site-rules {
   footer .icon {
     position: static;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
