@@ -30,9 +30,6 @@ gulp.task('style', function () {
         browsers: [
           'last 2 version'
         ]
-      }),
-      mqpacker({
-        sort: true
       })
     ]))
     // .pipe(minify())
