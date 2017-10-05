@@ -1,4 +1,9 @@
-body
-{
-    background:  url('../img/bg_reviews_bottom.png') no-repeat center bottom, url('../img/bg_reviews_top.jpg') no-repeat center top;
+body {
+  background: url('../img/bg_reviews_bottom.png') no-repeat center bottom, url('../img/bg_reviews_top.jpg') no-repeat center top;
+}
+
+@media (max-width: 1017px) {
+  body {
+    padding-top: 60px;
+  }
 }

@@ -1657,8 +1657,6 @@ h1.photo_header {
 /*Скрывающийся блок формы*/
 
 div[id^="item"] {
-  -webkit-transition: height .6s;
-  -moz-transition: height .6s;
   -o-transition: height .6s;
   transition: height .6s;
   height: 0px;
@@ -1667,18 +1665,87 @@ div[id^="item"] {
 
 div.max {
   height: 530px;
-  -webkit-transition-delay: .6s;
-  -moz-transition-delay: .6s;
-  -o-transition-delay: .6s;
   transition-delay: .6s;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
   transition-duration: 1s;
 }
 
 div#item1.max {
   height: 200px;
+}
+
+@media (max-width: 1017px) {
+  .reviews {
+    padding: 15px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .max h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .reviews_form #contactform {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reviews_pagination nav ul {
+    text-align: center;
+  }
+}
+
+@media (max-width: 667px) {
+  .reviews_form #contactform {
+    width: auto;
+  }
+  .reviews_form #submitbtn {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .reviews_form div#contactform label.agreement {
+    width: auto;
+  }
+  .reviews {
+    margin-bottom: 2rem;
+  }
+  .reviews_name {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: auto;
+    margin-bottom: 0.5rem;
+    float: none;
+  }
+  .reviews_name h3 {
+    margin-right: 1rem;
+    font-weight: 600;
+  }
+  .reviews_text {
+    width: auto;
+    float: none;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #eee;
+  }
+  .reviews_text> :first-child {
+    padding-top: 0;
+  }
+  .reviews_text> :last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .reviews_text {
+    margin-left: 0;
+  }
 }
 
 
