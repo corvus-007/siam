@@ -65,4 +65,48 @@ $(document).ready(function () {
       toggleMenu.classList.toggle('is-active');
     });
   }
+
+  // Services nav
+  var servicesNav = document.querySelectorAll('.services nav');
+
+  function createOption(item) {
+    var option = document.createElement('option');
+    var link = item.querySelector('a');
+    var href = link.href.split('/');
+    var pathname = href.slice(href.lastIndexOf('yslugi'));
+
+    option.value = pathname.join('/');
+    option.textContent = link.textContent;
+
+    if (item.classList.contains('active')) {
+      option.selected = true;
+    }
+
+    return option;
+  }
+
+  function createServicesNavForm(nav) {
+    var fragment = document.createDocumentFragment();
+    var servicesNavForm = document.createElement('form');
+    var select = document.createElement('select');
+    var navItems = nav.querySelectorAll('li');
+
+    servicesNavForm.className = 'services-nav-form';
+
+    for (var i = 0; i < navItems.length; i++) {
+      select.appendChild(createOption(navItems[i]));
+    }
+
+    servicesNavForm.appendChild(select);
+    nav.appendChild(servicesNavForm);
+
+    select.addEventListener('change', function () {
+      location.pathname = '/' + select.value;
+    });
+  }
+
+  if (servicesNav.length && window.matchMedia('(max-width: 1017px)').matches) {
+    Array.from(servicesNav).forEach(createServicesNavForm);
+  }
+
 });
