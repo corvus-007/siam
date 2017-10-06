@@ -54,13 +54,19 @@ $(document).ready(function () {
 
   // Mobile nav
   var mainNav = document.querySelector('.main-nav');
+  var topLine = document.querySelector('.top-line');
+  var topLineHeight = Math.floor(topLine.offsetHeight);
+  var mainNavList = mainNav.querySelector('.main-nav__list');
   var toggleMenu = document.querySelector('.main-nav__toggle');
 
-  mainNav.classList.remove('main-nav--no-js');
 
-  if (toggleMenu) {
+  if (toggleMenu && window.matchMedia('(max-width: 1017px)').matches) {
+    mainNavList.style.paddingTop = topLineHeight + 'px';
+    mainNav.classList.remove('main-nav--no-js');
+
     toggleMenu.addEventListener('click', function (event) {
       event.preventDefault();
+      document.body.classList.toggle('no-scroll');
       mainNav.classList.toggle('main-nav--closed');
       toggleMenu.classList.toggle('is-active');
     });

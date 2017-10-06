@@ -329,6 +329,12 @@ body {
   position: relative;
 }
 
+.no-scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+
 blockquote,
 q {
   quotes: none;
@@ -530,118 +536,6 @@ nav ul>li {
   display: none;
 }
 
-@media (max-width: 1017px) {
-  .top-line {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    background-color: rgba(255, 255, 255, .95);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  }
-  .top-line .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  .top-line .icon {
-    position: static;
-  }
-  .top-line .tel {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .main-nav {
-    order: 1;
-    width: auto;
-    position: static;
-  }
-  .main-nav__toggle {
-    position: relative;
-    display: block;
-    width: 36px;
-    height: 36px;
-    background-color: #5a3370;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  .main-nav__toggle::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-    height: 2px;
-    margin: auto;
-    color: #fff;
-    background: currentColor;
-    box-shadow: 0 0 0 currentColor, 0 0 0 currentColor;
-    transition: 0.25s ease-out;
-  }
-  .main-nav--closed .main-nav__toggle::before {
-    box-shadow: 0 6px 0 currentColor, 0 -6px 0 currentColor;
-  }
-  .main-nav__list {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(255, 255, 255, .95);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  }
-  .main-nav__list li {
-    padding: 0;
-  }
-  .main-nav__list a {
-    display: block;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-weight: 600;
-    font-size: 1.15rem;
-    color: #30193e;
-    transition: 0.25s;
-  }
-  .main-nav__list a:hover {
-    background-color: rgba(255, 255, 255, .9);
-    color: #5a3370;
-  }
-  .main-nav__list .logo {
-    display: none;
-  }
-  .main-nav--closed .main-nav__list {
-    display: none;
-  }
-  .main-nav--no-js .main-nav__list {
-    display: flex;
-  }
-}
-
-@media (max-width: 568px) {
-  .top-line .container {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  .top-line .icon {
-    display: none;
-  }
-  .top-line .tel {
-    position: static;
-    transform: none;
-  }
-}
-
 li.logo {
   position: relative;
   top: 20px;
@@ -702,6 +596,167 @@ li.logo {
 
 a.tel:hover {
   color: #5a3370;
+}
+
+@media (max-width: 1017px) {
+  .top-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    background-color: rgba(255, 255, 255, .95);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .top-line .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .top-line__logo {
+    z-index: 1;
+    display: block;
+    max-width: 60px;
+    margin-right: auto;
+  }
+  .top-line__logo a {
+    display: block;
+  }
+  .top-line__logo img {
+    width: 100%;
+  }
+  .icon {
+    position: static;
+  }
+  .tel {
+    z-index: 1;
+    margin-right: 2rem;
+  }
+  .tel__icon {
+    display: block;
+  }
+  .tel__text {
+    display: none;
+  }
+  .main-nav {
+    order: 1;
+    width: auto;
+    position: static;
+  }
+  .main-nav__toggle {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 3px;
+    margin: auto;
+    color: #5a3370;
+    background: currentColor;
+    box-shadow: 0 0 0 currentColor, 0 0 0 currentColor;
+    transition: 0.25s ease-out;
+  }
+  .main-nav--closed .main-nav__toggle::before {
+    box-shadow: 0 8px 0 currentColor, 0 -8px 0 currentColor;
+  }
+  .main-nav__list {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(0);
+    margin: 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, .95);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    visibility: visible;
+    transition: 0.45s;
+    overflow-y: auto;
+    will-change: transform, visibility;
+  }
+  .main-nav__list li {
+    padding: 0;
+  }
+  .main-nav__list a {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #30193e;
+    transition: 0.25s;
+  }
+  .main-nav__list a:hover {
+    background-color: rgba(255, 255, 255, .9);
+    color: #5a3370;
+  }
+  .main-nav__list .logo {
+    display: none;
+  }
+  .main-nav--closed .main-nav__list {
+    transform: translateX(-100%);
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .main-nav--no-js .main-nav__list {
+    display: flex;
+  }
+  .icon--navbar {
+    display: none;
+  }
+  .icon--nav {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    float: none;
+    overflow: hidden;
+    text-align: center;
+  }
+  .icon--nav > * {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
+
+@media (min-width: 1018px) {
+  .main-nav__list .icon--nav {
+    display: none;
+  }
+  .top-line__logo {
+    display: none;
+  }
+  .tel__icon {
+    display: none;
+  }
+}
+
+@media (max-width: 568px) {
+  .top-line .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .top-line .tel {
+    position: static;
+    transform: none;
+  }
 }
 
 
@@ -1171,10 +1226,10 @@ h1.photo_header {
     font-size: 1.15rem;
     line-height: 1.5;
   }
-  .etiquette_text > :first-child {
+  .etiquette_text> :first-child {
     padding-top: 0;
   }
-  .etiquette_text > :last-child {
+  .etiquette_text> :last-child {
     padding-bottom: 0;
   }
 }
