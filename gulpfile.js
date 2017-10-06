@@ -99,5 +99,6 @@ gulp.task('serve', function () {
   });
 
   gulp.watch('app/js/**/*', ['copy-script']);
+  gulp.watch(['app/images/', 'app/img/', 'app/attachments/'], ['images']);
   gulp.watch(['app/*.html', 'app/blocks/**/*.html'], ['fileinclude']).on('change', browserSync.reload);
 });
