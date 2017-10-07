@@ -448,7 +448,7 @@ h1 {
 
 @media (max-width: 360px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -631,6 +631,7 @@ a.tel:hover {
     position: static;
   }
   .tel {
+    position: static;
     z-index: 1;
     margin-right: 2rem;
   }
@@ -737,7 +738,7 @@ a.tel:hover {
 }
 
 @media (min-width: 1018px) {
-  .main-nav__list .icon--nav {
+  .icon--nav {
     display: none;
   }
   .top-line__logo {
@@ -1123,6 +1124,7 @@ h1.photo_header {
   }
   .about_massage h1 {
     text-align: center;
+    font-size: 2rem;
   }
   .about_massage_text {
     width: auto;
@@ -1342,6 +1344,13 @@ h1.photo_header {
     position: static;
     padding-left: 2rem;
   }
+  .service_text span {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.25rem;
+    background-color: #eee;
+    border-radius: 2px;
+  }
   .services nav {
     padding-top: 2.5rem;
   }
@@ -1357,10 +1366,6 @@ h1.photo_header {
     width: 100%;
     padding: 0.8rem;
     font-size: 1.2rem;
-    border: 3px solid #5a3370;
-    border-radius: 2px;
-    box-sizing: border-box;
-    background-color: #fff;
   }
 }
 
@@ -1665,6 +1670,7 @@ h1.photo_header {
     height: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    background: none;
   }
   .contacts_text {
     position: static;
@@ -1826,6 +1832,9 @@ div#item1.max {
 @media (max-width: 667px) {
   .reviews {
     margin-bottom: 2rem;
+  }
+  .max h1 {
+    font-size: 2rem;
   }
   .reviews_name {
     display: flex;
