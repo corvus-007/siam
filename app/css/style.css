@@ -1651,6 +1651,9 @@ h1.photo_header {
 }
 
 @media (max-width: 1017px) {
+  .contacts {
+    padding-bottom: 5rem;
+  }
   .contacts h1 {
     width: auto;
   }
@@ -1667,30 +1670,7 @@ h1.photo_header {
     display: none !important;
   }
   .contacts_bottom {
-    height: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background: none;
-  }
-  .contacts_text {
-    position: static;
-    width: auto;
-    padding: 2rem;
-    background-color: #eee;
-    border-radius: 2px;
-  }
-  .contacts_text span {
-    font-size: 1.35rem;
-  }
-  .contacts_text p {
-    font-size: 1.15rem;
-    line-height: 1.5;
-  }
-  .contacts_text> :first-child {
-    padding-top: 0;
-  }
-  .contacts_text> :last-child {
-    padding-bottom: 0;
+    display: none;
   }
 }
 
